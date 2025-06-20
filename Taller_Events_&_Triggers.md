@@ -34,8 +34,8 @@ CREATE TABLE IF NOT EXISTS alerta_stock (
 
 1. Validar stock antes de agregar detalle de producto (Trigger `BEFORE INSERT`).
 2. Descontar stock tras agregar ingredientes extra (Trigger `AFTER INSERT`).
-3. Registrar auditoría de cambios de precio (Trigger `AFTER UPDATE`).
-4. Impedir precio cero o negativo (Trigger `BEFORE UPDATE`).
+3. Registrar auditoría de cambios de precio en `producto_presentacion` (Trigger `AFTER UPDATE`).
+4. Impedir precio cero o negativo en `producto_presentacion` (Trigger `BEFORE UPDATE`).
 5. Generar factura automática (Trigger `AFTER INSERT`).
 6. Actualizar estado de pedido tras facturar (Trigger `AFTER INSERT`).
 7. Evitar eliminación de combos en uso (Trigger `BEFORE DELETE`).
